@@ -1,0 +1,358 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: url('farmer.jpg') center/cover no-repeat, linear-gradient(120deg, #e0ffe6 0%, #f8fff4 100%);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%), 
+                url('farmer.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 2.5rem 0 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 12px #b2f7c1;
+    position: relative;
+}
+header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(67, 233, 123, 0.3); /* Optional overlay for readability */
+    z-index: 0;
+}
+header h1, header p {
+    position: relative;
+    z-index: 1;
+}
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+header p {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+.farm-image {
+    display: block;
+    max-width: 90vw;
+    width: 480px;
+    height: auto;
+    margin: 2rem auto 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #b2f7c1;
+    border: 4px solid #fff;
+}
+main {
+    max-width: 700px;
+    margin: 2.5rem auto;
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #b2f7c1;
+    padding: 2.5rem 2rem;
+}
+h2 {
+    text-align: center;
+    color: #388e3c;
+    margin-bottom: 2rem;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+li {
+    background: #f4fff8;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 0.5rem;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+li:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 18px #b2f7c1;
+}
+.veg-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #2e7d32;
+}
+.price {
+    color: #388e3c;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+}
+button {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px #b2f7c1;
+    transition: background 0.2s, transform 0.1s;
+}
+button:hover {
+    background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+    transform: scale(1.07);
+}
+footer {
+    text-align: center;
+    color: #388e3c;
+    margin: 2.5rem 0 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.top-right-image {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    z-index: 10;
+    background: rgba(255,255,255,0.85);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px #b2f7c1;
+    padding: 6px;
+}
+.top-right-image img {
+    width: 120px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+@media (max-width: 700px) {
+    main { padding: 1.2rem 0.2rem; }
+    ul { grid-template-columns: 1fr; }
+    .farm-image { width: 98vw; }
+    .top-right-image {
+        position: static;
+        margin: 0 auto 1rem auto;
+        display: flex;
+        justify-content: flex-end;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+    .top-right-image img {
+        width: 80px;
+        border-radius: 10px;
+    }
+}
+.about-section {
+    background: #eafff0;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px #b2f7c1;
+    text-align: center;
+}
+.order-section {
+    background: #f8fff4;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 8px #e0e0e0;
+}
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 350px;
+    margin: 0 auto;
+}
+.order-form label {
+    font-weight: 500;
+    color: #2e7d32;
+}
+.order-form input {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #b2f7c1;
+    font-size: 1rem;
+}
+.order-form button[type="submit"] {
+    margin-top: 1rem;
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px #b2f7c1;
+    transition: background 0.2s, transform 0.1s;
+}
+.order-form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+    transform: scale(1.05);
+}
+.testimonials-section {
+    background: #f4fff8;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 8px #e0e0e0;
+    text-align: center;
+}
+.testimonials-section blockquote {
+    font-style: italic;
+    color: #388e3c;
+    margin: 1rem auto;
+    max-width: 500px;
+    background: #eafff0;
+    border-left: 4px solid #43e97b;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+}
+.contact-section {
+    background: #eafff0;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 8px #b2f7c1;
+    text-align: center;
+}
+.contact-section a {
+    color: #2e7d32;
+    text-decoration: underline;
+}
+.social-links {
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+.social-links a {
+    color: #388e3c;
+    text-decoration: none;
+    margin: 0 0.3rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.social-links a:hover {
+    color: #38f9d7;
+}
+.cart-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+#cartBtn {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #b2f7c1;
+    transition: background 0.2s, transform 0.1s;
+    position: relative;
+}
+#cartBtn:hover {
+    background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+    transform: scale(1.05);
+}
+#cartCount {
+    background: #2e7d32;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.2em 0.6em;
+    font-size: 0.9em;
+    margin-left: 0.5em;
+}
+.cart-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(0,0,0,0.3);
+}
+.cart-modal-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    max-width: 400px;
+    box-shadow: 0 4px 24px #b2f7c1;
+    position: relative;
+    text-align: center;
+}
+.cart-modal-content h2 {
+    margin-top: 0;
+}
+.cart-modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+.cart-modal-content li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    background: #f4fff8;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+}
+.cart-modal-content .remove-item {
+    background: #ff5252;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.2rem 0.7rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    transition: background 0.2s;
+}
+.cart-modal-content .remove-item:hover {
+    background: #d32f2f;
+}
+.cart-modal-content #checkoutBtn {
+    margin-top: 1rem;
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px #b2f7c1;
+    transition: background 0.2s, transform 0.1s;
+}
+.cart-modal-content #checkoutBtn:hover {
+    background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+    transform: scale(1.05);
+}
+.cart-modal-content .close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.cart-modal-content .close:hover {
+    color: #43e97b;
+}
+@media (max-width: 500px) {
+    .cart-modal-content {
+        max-width: 95vw;
+        padding: 1rem 0.2rem;
+    }
+}
